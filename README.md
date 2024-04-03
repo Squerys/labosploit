@@ -9,6 +9,8 @@ Explication:
 
 Lorsque l'on charge une séance labomep:
 - Le client récupère les différentes ressources dont il a besoin (textes, assets, images, mais surtout script js de la séance)
+
+  
 En analysant les différents script chargés, on observe un fichier nommé "textes-CnJyC1bT.js" contenant un dictionnaire qui contient les strings à afficher selon si la réponse est juste, incomplète ou exacte
 Notre objectif est de maintenant trouver quand et comment cette liste est chargé pour retrouver la condition de vérification.
 On y trouve une référence dans un autre script qui semble obfusqué légèrement et peu intuitif nommé au chemin absolu /build nommé "sectionsquelettemtg32_[inserer_nom_de_seance]-[caractères_aleatoire].js"
