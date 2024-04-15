@@ -11,7 +11,7 @@ Lorsque l'on charge une séance labomep:
 - Le client récupère les différentes ressources dont il a besoin (textes, assets, images, mais surtout script js de la séance)
 
 <br>En analysant les différents script chargés, on observe un fichier nommé "textes-CnJyC1bT.js" contenant un dictionnaire qui contient les strings à afficher selon si la réponse est juste, incomplète ou exacte. </br>
-Notre objectif est de maintenant trouver quand et comment cette liste est chargé pour retrouver la condition de vérification.
+Notre objectif est de maintenant trouver quand et comment cette liste est chargée pour retrouver la condition de vérification.
 - On y trouve une référence dans un autre script qui semble obfusqué légèrement et peu intuitif nommé au chemin absolu /build nommé "sectionsquelettemtg32_[inserer_nom_de_seance]-[caractères_aleatoire].js"
 - Par chance, il y a aussi un autre repertoire nommé /src avec un meme fichier "sectionsquelettemtg32_[inserer_nom_de_seance]-Edit-[caractères_aleatoire].js" qui lui n'est pas utilisé par la séance
 - Mais qui est quand meme chargé (je ne sais pas pourquoi), c'est une version "squelette" du scripts obfusqué.
@@ -37,7 +37,7 @@ function afficheReponse (bilan, depasse) {
       }
     }
 ```
-Il nous faut maitenant cherché ou est definit le contenu de la variable bilan, on cherche encore un peu
+Il nous faut maitenant chercher ou est definit le contenu de la variable bilan, on cherche encore un peu
 ```
 case 'correction': {
       let bilanReponse = ''
